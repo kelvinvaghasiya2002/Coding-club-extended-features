@@ -1,0 +1,415 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mode{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: silver;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#pop-up{
+    /* height: 40px;
+    width: 200px; */
+    position: fixed;
+    bottom: 40px;
+    left: 100px;
+    background-color: silver;
+    padding: 6px 20px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: none;
+}
+ 
+#mode:hover + #pop-up{
+    display: block;
+}
+
+.heading{
+    /* width: auto; */
+    height: 600px;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.heading::before{
+    content: " ";
+    background-image: url(images/wallpaper.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    /* opacity: 0.7; */
+}
+
+
+
+
+/* NAVIGATION BAR */
+
+
+
+.navbar{
+    background-color: silver;
+    width: 100%;
+    position: fixed;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    box-shadow: 2px 2px 100px black;
+    /* border-bottom: 2px solid black; */
+}
+
+.download{
+    border-radius: 7px;
+    border: 1px solid navy;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+}
+
+.download:hover{
+    background-color: black;
+}
+
+@media (min-width: 990px){
+    .seperate{
+        margin-left: 18rem;
+    }
+}
+
+@media (max-width: 990px){
+    .download{
+        margin-left: 0;
+    }
+}
+
+
+/* HEADING */
+
+
+
+
+.main-heading{
+    font-weight: 700;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.Row-1{
+    position: relative;
+    top: 13rem;
+    margin: 0;
+    text-align: center;
+}
+
+.Row-2{
+    position: relative;
+    top: 16rem;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.download-btn{
+    margin: 0 2rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0%;
+    border: 2px solid white;
+    padding: 0.8rem 2rem;
+}
+
+.download-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 440px){
+    .download-btn{
+        margin: 0 0.7rem;
+    }
+}
+
+@media (max-width: 500px){
+    .Row-1{
+        text-align: left;
+        padding-left: .7rem;
+        max-width: 400px;
+        top: 10rem;
+    }
+    .Row-2{
+        text-align: left;
+        margin-top: 20px;
+        top: 14rem;
+    }
+
+    .heading{
+        height: 500px;
+    }
+}
+
+
+
+
+/* RECOMMANDED COURSES */
+
+#courses{
+    padding: 3rem 3rem;
+}
+
+.course-heading{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    margin-top: 3rem;
+}
+
+@media (max-width: 975px){
+    .grid{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-rows: repeat(2,auto);
+    }
+}
+
+@media (max-width: 600px){
+    .grid{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        grid-template-rows: repeat(4,auto);
+    }
+    #courses{
+        padding: 3rem 1rem;
+    }
+}
+
+.grid-items{
+    background-color: #FDF4F5;
+    border-radius: 10px;
+    box-shadow: 20px 20px 60px #888888;
+}
+
+.free-course{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #BA90C6;
+}
+
+.grid-items-i{
+    padding: 1rem 1rem;
+}
+
+.course-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.9rem;
+}
+
+.course-description{
+    font-size: 0.9rem;
+}
+
+.course-btn{
+    border: 2px solid black;
+    padding: 0.8rem 2rem;
+    border-radius: 0%;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-weight: 600;
+}
+
+.course-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+/* TESTIMONIALS */
+
+
+#Testimonials{
+    padding: 3rem 3rem;
+}
+
+.t-grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-rows: repeat(2,auto);
+}
+
+@media (max-width:600px){
+    .t-grid{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        grid-template-rows: repeat(4,auto);
+    }
+    #Testimonials{
+        padding: 3rem 1.8rem;
+    }
+}
+
+.name{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.fa-solid{
+    height: auto;
+    width: 25px;
+    font-size: larger;
+}
+
+.t-grid-items{
+    background-color: #FDF4F5;
+    padding: 1rem;
+}
+
+.t-grid-items:hover{
+    box-shadow: 15px 15px 40px #888888;
+    position: relative;
+    bottom: 20px;
+}
+
+
+
+/* TEACHING */
+
+
+
+.main{
+    /* width: auto; */
+    height: 350px;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main::before{
+    content: " ";
+    background-image: url(images/teacher-3.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+    /* aspect-ratio: 3/2.09; */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    /* opacity: 0.7; */
+}
+
+.teacher-content{
+    position: relative;
+    color: white;
+    top: 3rem;
+    text-align: center;
+}
+
+.main-h3{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.main-p{
+    max-width: 700px;
+    margin: 2.5rem auto 3rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 700px){
+    .main-p{
+        margin: 2.5rem 0.9rem 3rem;
+    }
+}
+
+.main-btn{
+    border: 2px solid silver;
+    padding: 0.8rem 2rem;
+    border-radius: 0%;
+    background-color: rgba(0, 0, 0, 0);
+    color: silver;
+    font-weight: 600;
+}
+
+.main-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+/* FOOTER */
+
+
+
+#Contact-us{
+    text-align: center;
+    padding: 1.5rem 5rem;
+    background-color: #FDF4F5;
+}
+
+@media (max-width: 420px){
+    #Contact-us{
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+.footer{
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+@media (max-width : 915px){
+    .footer{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        grid-template-rows: repeat(3,auto);
+    }
+}
+
+.footer-1{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: auto auto;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.footer-3{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: auto auto;
+    color: black;
+}
+
+.footer-2{
+    margin: auto auto;
+    color: black;
+}
+
+.stick{
+    font-size: 2rem;
+    font-weight: 500;
+}
