@@ -40,6 +40,8 @@ document.getElementById("mode").addEventListener("click", function(){
 }); 
 
 document.getElementById("mode").addEventListener("mouseover", function(){
+  setTimeout(function(){document.getElementById("pop-up").style.display = "block";},0);
+  setTimeout(function(){document.getElementById("pop-up").style.display = "none";},2000);
   if(document.body.style.color=='black')
   {
     document.getElementById("pop-up").innerHTML = "switch to dark mode";
